@@ -1,52 +1,108 @@
+/* html {
+    height: 100%;
+    width: 100%;
+} */
+
 body {
-    font-family: 'Archivo', sans-serif;
+    /* font-family: 'Archivo', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     background-color: #2c3e50;
     color: white;
-    display: flex;
-    justify-content: space-between;
+    opacity: 0.9;
     animation: fadeIn .5s linear;
-}
-.leftSide{
-    width: 33.3%;
+    width: 100%;
     height: 100%;
 }
-.centerSide {
-    width: 33.3%;
+.container-clock {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-}
-.rightSide {
-    width: 33.3%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    user-select: none;
 }
 .js-clock {
-    font-size: 150px;
+    font-size: 175px;
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 20px;
 }
 .js-greetings {
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: 600;    
     text-align: center;
+    margin-bottom: 30px;
 }
 .askMainfocus {
     font-size: 30px;
+    font-weight: 400;  
     text-align: center;
+    margin-bottom: 25px;
+}
+.js-weather {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 18px;
+    font-weight: 400;
+}
+.js-toDoList {
+    position: absolute;
+    font-size: 20px;
+    width: 30%;
+    top: 20px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(0,0,0,0.45);
+    padding:5px;
+    border-radius: 7px;
+}
+.toDoItem {
+    margin: 3px;
 }
 .form,
 .greetings {
     display: none;
     color: white;
+    background-color: transparent;
 }
 .showing {
     display: block;
     transition: display .5s ease-in-out;
 }
+.js-form,
+.js-toDoForm {
+    border-bottom: 2px solid white;
+}
+input[type="text"] {
+    width: 500px; /* 원하는 너비 설정 */ 
+    height: auto; /* 높이값 초기화 */ 
+    line-height: normal; /* line-height 초기화 */ 
+    padding: 0; /*.1em .1em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */ 
+    font-family: inherit; /* 폰트 상속 */ 
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    border: none; 
+    outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */ 
+    -webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */ 
+    -moz-appearance: none; 
+    appearance: none;
+    background-color: transparent;
+}
+input::placeholder {
+    color: rgba(255,255,255,0.5);
+    font-weight: 200;
+  }
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -64,4 +120,10 @@ body {
     z-index: -1;
     animation: fadeIn .5s linear;
 }
-
+button {
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
