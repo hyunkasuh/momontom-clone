@@ -51,6 +51,7 @@ body {
     background-color: rgba(0,0,0,0.3);
     font-size: 18px;
     font-weight: 400;
+    user-select: none;
 }
 .js-toDoList {
     position: absolute;
@@ -120,10 +121,22 @@ input::placeholder {
     z-index: -1;
     animation: fadeIn .5s linear;
 }
-button {
+.delBtn {
     color: white;
     font-size: 20px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.delBtn:hover {
+    color: rgba(77, 249, 255, 0.9);
+    transform: scale(1.1);
+}
+.toDoItem {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+.fade {
+    opacity: 0;
 }
